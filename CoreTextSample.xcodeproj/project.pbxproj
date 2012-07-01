@@ -81,6 +81,7 @@
 		03BF4BD7159F14B300888C10 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BF4BD6159F14B300888C10 /* Default@2x.png */; };
 		03BF4BDB159F167300888C10 /* 75.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BF4BDA159F167300888C10 /* 75.png */; };
 		03BF4BDD159F167600888C10 /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BF4BDC159F167600888C10 /* 114.png */; };
+		03BF4CA8159FC3BF00888C10 /* NMCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF4CA7159FC3BF00888C10 /* NMCustomLabel.m */; };
 		03EA96FD159477BF00FB2EDC /* ARFontPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA96FC159477BF00FB2EDC /* ARFontPickerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		03EA973E1594A29E00FB2EDC /* TickleGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA973B1594A29E00FB2EDC /* TickleGestureRecognizer.m */; };
 		03EA973F1594A29E00FB2EDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA973D1594A29E00FB2EDC /* ViewController.m */; };
@@ -360,7 +361,6 @@
 		D4111A32151A7FEB00EF6CC0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4111A30151A7FEB00EF6CC0 /* MainStoryboard_iPhone.storyboard */; };
 		D4111A35151A7FEB00EF6CC0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4111A33151A7FEB00EF6CC0 /* MainStoryboard_iPad.storyboard */; };
 		D4111A43151A807400EF6CC0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4111A42151A807400EF6CC0 /* CoreText.framework */; };
-		D4111A46151A81EA00EF6CC0 /* NMCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111A45151A81EA00EF6CC0 /* NMCustomLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -454,9 +454,10 @@
 		03A6718D1592E93100A5AAE6 /* MTStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStatusBarOverlay.m; sourceTree = "<group>"; };
 		03BF4BD4159F14AB00888C10 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		03BF4BD6159F14B300888C10 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		03BF4BD8159F15B300888C10 /* 960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 960.png; path = ../../../Desktop/960.png; sourceTree = "<group>"; };
 		03BF4BDA159F167300888C10 /* 75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 75.png; sourceTree = "<group>"; };
 		03BF4BDC159F167600888C10 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
+		03BF4CA6159FC3BF00888C10 /* NMCustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCustomLabel.h; sourceTree = "<group>"; };
+		03BF4CA7159FC3BF00888C10 /* NMCustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCustomLabel.m; sourceTree = "<group>"; };
 		03EA96FB159477BF00FB2EDC /* ARFontPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFontPickerViewController.h; sourceTree = "<group>"; };
 		03EA96FC159477BF00FB2EDC /* ARFontPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFontPickerViewController.m; sourceTree = "<group>"; };
 		03EA973A1594A29E00FB2EDC /* TickleGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickleGestureRecognizer.h; sourceTree = "<group>"; };
@@ -758,8 +759,6 @@
 		D4111A31151A7FEB00EF6CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D4111A34151A7FEB00EF6CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D4111A42151A807400EF6CC0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		D4111A44151A81EA00EF6CC0 /* NMCustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMCustomLabel.h; path = ../../src/NMCustomLabel.h; sourceTree = "<group>"; };
-		D4111A45151A81EA00EF6CC0 /* NMCustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMCustomLabel.m; path = ../../src/NMCustomLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1245,7 +1244,6 @@
 			children = (
 				03BF4BDC159F167600888C10 /* 114.png */,
 				03BF4BDA159F167300888C10 /* 75.png */,
-				03BF4BD8159F15B300888C10 /* 960.png */,
 				03BF4BD6159F14B300888C10 /* Default@2x.png */,
 				03BF4BD4159F14AB00888C10 /* Default.png */,
 				03EA97441594A4F300FB2EDC /* AVFoundation.framework */,
@@ -1336,8 +1334,8 @@
 				03EA97401594A48300FB2EDC /* chomp.wav */,
 				03EA97411594A48300FB2EDC /* hehehe1.wav */,
 				03EA97461594E5AB00FB2EDC /* WoodFloor@2x.jpg */,
-				D4111A44151A81EA00EF6CC0 /* NMCustomLabel.h */,
-				D4111A45151A81EA00EF6CC0 /* NMCustomLabel.m */,
+				03BF4CA6159FC3BF00888C10 /* NMCustomLabel.h */,
+				03BF4CA7159FC3BF00888C10 /* NMCustomLabel.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -1716,7 +1714,6 @@
 			files = (
 				D4111A2B151A7FEB00EF6CC0 /* main.m in Sources */,
 				D4111A2F151A7FEB00EF6CC0 /* NMAppDelegate.m in Sources */,
-				D4111A46151A81EA00EF6CC0 /* NMCustomLabel.m in Sources */,
 				03A67038159085FC00A5AAE6 /* NMViewController.m in Sources */,
 				03A670F7159112FB00A5AAE6 /* MFDoorwayTransition.m in Sources */,
 				03A6711715912A3D00A5AAE6 /* UIView+Animation.m in Sources */,
@@ -1751,6 +1748,7 @@
 				030B3474159B472E004B05D5 /* Draggable.m in Sources */,
 				030B347E159C3B08004B05D5 /* UIViewController+KNSemiModal.m in Sources */,
 				030B3485159C4405004B05D5 /* FXLabel.m in Sources */,
+				03BF4CA8159FC3BF00888C10 /* NMCustomLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

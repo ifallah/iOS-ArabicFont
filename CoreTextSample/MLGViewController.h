@@ -74,6 +74,7 @@
 @property (strong,nonatomic) UIColor*color1;
 - (IBAction)showInfo:(id)sender;
 @property (strong, nonatomic) MGTileMenuController *tileController;
+@property (strong, nonatomic) IBOutlet UIView *pint;
 @property (strong, nonatomic) IBOutlet UIView *TextView;
 @property (strong, nonatomic) IBOutlet UIView *ShadowCalorView;
 @property (strong, nonatomic) IBOutlet UITextView *TheTextF;
@@ -102,6 +103,7 @@
 - (IBAction)dismissKeyboard:(id)sender;
 -(IBAction)SliderRotet:(id)sender;
 -(IBAction)SliderFeed:(id)sender;
+-(IBAction)ms7:(id)sender;
 
 //- (void)showInfo1:(id)sender;
 

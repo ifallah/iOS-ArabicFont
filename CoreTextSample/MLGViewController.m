@@ -21,7 +21,7 @@
 
 #import "Draggable.h"
 
-
+/////  do the global dor the string ////
 //#import "Globals.h"
 //#import "PopoverDemoController.h"
 #import "CustomPopoverBackgroundView.h"
@@ -57,38 +57,50 @@
 @synthesize Caler;
 @synthesize al;
 @synthesize dismissButton;
+@synthesize pint;
 -(void)TEXTlb{
     
-    
-  hand =  [[UIImageView alloc] initWithFrame:CGRectMake(50, 160, self.TextView.frame.size.width, h)];
+    //hand its photo not us
+  //hand =  [[UIImageView alloc] initWithFrame:CGRectMake(50, 160, self.TextView.frame.size.width, h)];
    // hand.contentMode = UIViewContentModeCenter;
+    
+    // qeyas al msafah 
+    
     h=   100+thesizef+[TheTextF.text length];
-    
+    //// 7thf al  ketaba
     [TEXT removeFromSuperview];
-    
+    /// benaa al ketaba
     TEXT = [[NMCustomLabel alloc] initWithFrame:CGRectMake(PontUp, PontLeft, self.TextView.frame.size.width, h)];
     
-    
+    /// ktabt men text view
 	TEXT.text = TheTextF.text;
     
-    
+    // a7`tyar al 7`6
 	TEXT.font = [UIFont fontWithName:thefont size:thesizef];
     
+    
+    
+    // make the background Color emty
     TEXT.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0];
 
     
-    
+    ///// kern zero 
     [TEXT setKern:0];
     
     
     
 
-    
+    /// the font color 
     TEXT.textColor = thecalor;
+    
+    // the font rotat
     TEXT.transform = Rotate;
     
+   // the font alpha 
     [TEXT setAlpha:AlphaFloat];
-    [self.view addSubview:TEXT];
+    
+    /// show in the end to the screen 
+    [pint addSubview:TEXT];
     
     
 }
@@ -453,7 +465,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
 	// Ensure that only touches on our own view are sent to the gesture recognisers.
-	if (touch.view == self.view) {
+	if (touch.view == pint) {
 		return YES;
 	}
 	
@@ -464,7 +476,7 @@
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
 {
 	// Find out where the gesture took place.
-	CGPoint loc = [gestureRecognizer locationInView:self.view];
+	CGPoint loc = [gestureRecognizer locationInView:pint];
  
     
 	if ([gestureRecognizer isMemberOfClass:[UITapGestureRecognizer class]] && ((UITapGestureRecognizer *)gestureRecognizer).numberOfTapsRequired == 2) {
@@ -477,7 +489,7 @@
 				tileController.dismissAfterTileActivated = NO; // to make it easier to play with in the demo app.
 			}
 			// Display the TileMenu.
-			[tileController displayMenuCenteredOnPoint:loc inView:self.view];
+			[tileController displayMenuCenteredOnPoint:loc inView:pint];
 		}
 		
 	} else {
@@ -584,11 +596,11 @@
     UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
 	doubleTapRecognizer.numberOfTapsRequired = 2;
 	doubleTapRecognizer.delegate = self;
-	[self.view addGestureRecognizer:doubleTapRecognizer];
+	[pint addGestureRecognizer:doubleTapRecognizer];
 	
 	UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
 	tapRecognizer.delegate = self;
-	[self.view addGestureRecognizer:tapRecognizer];
+	[pint addGestureRecognizer:tapRecognizer];
     
 }
 -(void)MakeTextRedy{
@@ -649,9 +661,9 @@
 //    
     UITouch* touch = [touches anyObject];
 //    
-   CGPoint pnt = [touch locationInView:self.view];
+   CGPoint pnt = [touch locationInView:pint];
 //    
-   CGPoint reversePoint = CGPointMake(pnt.x, self.view.frame.size.height-pnt.y);
+   CGPoint reversePoint = CGPointMake(pnt.x, pint.frame.size.height-pnt.y);
 //    
     [TEXT setCenter:reversePoint ];
     
@@ -725,7 +737,7 @@
     
 
     [UIView animateWithDuration:2.5 animations:^{
- [self.view addSubview:TheTextFview];
+ [pint addSubview:TheTextFview];
 
      
  }completion:^(BOOL finished){
@@ -753,7 +765,7 @@
     i = [AllFontIs intValue];
 
     
-    [self.view addSubview:TheSlidrView];
+    [pint addSubview:TheSlidrView];
     [TheSlidrView setAlpha:0.0];
 
     
@@ -766,7 +778,7 @@
         [UIView animateWithDuration:0.5 animations:^{
             
             [TheSlidrView setAlpha:1.0];
-            [TheSlidrView raceTo:CGPointMake(-270, 0) withSnapBack:YES];
+            [TheSlidrView raceTo:CGPointMake(-185, 0) withSnapBack:YES];
         }completion:^(BOOL finished){
             [UIView animateWithDuration:1.0 animations:^{
                 [slider setValue:TheFontNO];
@@ -782,7 +794,7 @@
     contNO = @"FontSize";
 
     
-    [self.view addSubview:TheSlidrView];
+    [pint addSubview:TheSlidrView];
     [TheSlidrView setAlpha:0.0];
 
     
@@ -796,7 +808,7 @@
             slider.maximumValue = 44 ;
             slider.minimumValue = 5;
             [slider setValue:thesizef];
-            [TheSlidrView raceTo:CGPointMake(-270, 0) withSnapBack:YES];
+             [TheSlidrView raceTo:CGPointMake(-185, 0) withSnapBack:YES];
         }completion:^(BOOL finished){
             [UIView animateWithDuration:2.5 animations:^{
                 
@@ -824,7 +836,7 @@
     [labl setHidden:YES];
     
  [UIView animateWithDuration:0.5 animations:^{
-      [self.view addSubview:TheCalorView];
+      [pint addSubview:TheCalorView];
  [TheCalorView raceTo:CGPointMake(-320, 0) withSnapBack:NO];
  
  }completion:^(BOOL finished){
@@ -900,7 +912,7 @@
     ClozOpen = @"2";
     [TEXT removeFromSuperview];
     
-    [self.view addSubview:ShadowCalorView];
+    [pint addSubview:ShadowCalorView];
     [ShadowCalorView raceTo:CGPointMake(0, 0) withSnapBack:NO];
     
     [self setColorPicker:[[SSColorPicker alloc] initWithNibName:@"SSColorPicker" bundle:nil]];
@@ -920,7 +932,7 @@
 -(void)ShowfeedView{
     
     [UIView animateWithDuration:0.0 animations:^{
-        [self.view addSubview:FeedSliderView];
+        [pint addSubview:FeedSliderView];
         [FeedSliderView raceTo:CGPointMake(0, -480) withSnapBack:NO];
     }completion:^(BOOL finished){
         [UIView animateWithDuration:0.7 animations:^{
@@ -937,7 +949,7 @@
     
     
     [UIView animateWithDuration:0.0 animations:^{
-        [self.view addSubview:SliderRotatView];
+        [pint addSubview:SliderRotatView];
         [SliderRotatView raceTo:CGPointMake(0, -480) withSnapBack:NO];
     }completion:^(BOOL finished){
         [UIView animateWithDuration:0.7 animations:^{
@@ -1078,7 +1090,11 @@
     
     return YES;
 }
-
+-(IBAction)ms7:(id)sender{
+    
+    TheTextF.text = @"";
+    
+}
 -(void)ff{
      [TEXT removeFromSuperview];
     [label1 removeFromSuperview];
